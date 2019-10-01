@@ -6,9 +6,9 @@ Specials thanks to [@zawy12](https://github.com/zawy12) for the implementations 
 
 ## Compared algorithms
 
-  * LWMA - written by , urrently used by Bitcoin Gold.
-  * DigiShield3 - currently used by ZCash.
-  * DAA - currently used by Bitcoin Cash.
+  * LWMA - currently used by Bitcoin Gold
+  * DigiShield3 - currently used by ZCash
+  * DAA - currently used by Bitcoin Cash
 
 LWMA is demonstrated to be the best alternative, it also responds the quickest to changes.
 
