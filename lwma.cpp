@@ -59,6 +59,7 @@ unsigned int LwmaCalculateNextWorkRequired(const CBlockIndex* pindexLast, const 
 
        // A 6*T limit will prevent large drops in difficulty from long solvetimes.
        //// *** MODIFICATION:
+       //// Remove min to recover faster from a hash spike (attacker spikes hash then disappears)
        //// int64_t solvetime = std::min(6 * T, thisTimestamp - previousTimestamp);
         int64_t solvetime = thisTimestamp - previousTimestamp;
 
