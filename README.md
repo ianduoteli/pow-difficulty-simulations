@@ -10,7 +10,7 @@ Specials thanks to [@zawy12](https://github.com/zawy12) for the implementations 
   * DigiShield3 - currently used by ZCash
   * DAA - currently used by Bitcoin Cash
 
-LWMA is demonstrated to be the best alternative, it also responds the quickest to changes.
+**LWMA is demonstrated to be the best alternative, it also responds the quickest to changes.**
 
 ## Building and running the simulation
 
@@ -29,3 +29,16 @@ LWMA is demonstrated to be the best alternative, it also responds the quickest t
 ## Why is this challenging
 
 Using the same hash algorithm as Bitcoin (sha256) is risky since specialized ASIC mining rigs are several x1000's more powerful than non-specialized equipment. Since mining rigs are widely available for rent, an attacker could rent significant hash power for a short period of time and disrupt the protocol. In addition, in the early days of the protocol, when honest hash power is naturally still low, attacks are significantly easier.
+
+## LWMA parameter tuning
+
+* During early days of the protocol (little hash power)
+    ```
+    nLwmaAveragingWindow = 20
+    solvetime = thisTimestamp - previousTimestamp
+    ```
+* During mature days of the protocol (substantial hash power)
+    ```
+    nLwmaAveragingWindow = 45
+    solvetime = std::min(6 * T, thisTimestamp - previousTimestamp)
+    ```
