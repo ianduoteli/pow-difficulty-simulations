@@ -32,6 +32,8 @@ Using the same hash algorithm as Bitcoin (sha256) is risky since specialized ASI
 
 ## LWMA parameter tuning
 
+Proposed parameters based on these simulations (this is open for debate of course):
+
 * During early days of the protocol (little hash power)
     ```
     nLwmaAveragingWindow = 20
