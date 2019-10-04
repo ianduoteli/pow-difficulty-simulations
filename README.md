@@ -36,7 +36,7 @@ Proposed parameters based on these simulations (this is open for debate of cours
 
 * During early days of the protocol (little hash power)
     ```
-    nLwmaAveragingWindow = 20
+    nLwmaAveragingWindow = 30
     solvetime = thisTimestamp - previousTimestamp
     ```
 * During mature days of the protocol (substantial hash power)
